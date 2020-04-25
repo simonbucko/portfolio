@@ -5,11 +5,16 @@
 }
 
 #first-section {
+  display: block;
   height: 100vh;
 }
 #second-section {
+  display: block;
   height: 100vh;
+  background-color: red;
 }
 #third-section {
+  display: block;
   height: 100vh;
+  background-color: blue;
 }
