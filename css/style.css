@@ -4,22 +4,33 @@
   box-sizing: border-box;
 }
 
-main {
-  height: 100vh;
-  overflow: hidden;
-}
-
 section {
   display: block;
   height: 100vh;
+  scroll-snap-align: center;
 }
 
-section:nth-child(1) {
-}
 section:nth-child(2) {
+  background-color: green;
+}
+section:nth-child(3) {
   background-color: red;
 }
 
-section:nth-child(3) {
+section:nth-child(4) {
   background-color: blue;
+}
+
+.buttons {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+.activeButton {
+  background-color: red;
+}
+
+.fullpge {
+  scroll-snap-type: y mandatory;
 }
