@@ -17,17 +17,14 @@ activeButtons(buttons, 0);
 //Buttons clicks scrolling
 buttonDown.addEventListener('click', () => {
     sections[2].scrollIntoView({ behavior: "smooth" });
-    activeButtons(buttons, 2);
 })
 
 buttonMiddle.addEventListener('click', () => {
     sections[1].scrollIntoView({ behavior: "smooth" });
-    activeButtons(buttons, 1);
 })
 
 buttonUp.addEventListener('click', () => {
     sections[0].scrollIntoView({ behavior: "smooth" });
-    activeButtons(buttons, 0)
 })
 //Scrolling onClick
 sections.forEach(section => {
