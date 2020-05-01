@@ -39,6 +39,7 @@ section:nth-child(2) {
   height: 115%;
   width: 100%;
   overflow: hidden;
+  background: url(../images/backGround.PNG) no-repeat 15% center/cover;
 }
 
 .content {
@@ -115,7 +116,7 @@ section:nth-child(2) {
 }
 
 section:nth-child(3) {
-  background-color: #525252;
+  background-color: #0a0a06;
   color: white;
   display: flex;
   align-items: center;
@@ -198,8 +199,69 @@ section:nth-child(3) {
   }
 }
 section:nth-child(4) {
-  background-color: blue;
+  background-color: white;
+  display: flex;
+  align-items: center;
 }
+
+.projectsContent {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.projectCard {
+  margin: 2rem 5rem 2rem 5rem;
+  width: 30rem;
+  height: 25rem;
+  border: 2px solid black;
+  position: relative;
+}
+
+.projectCard h3 {
+  text-align: center;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+  width: 100%;
+}
+
+.projectImage {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+  height: 100%;
+}
+
+.projectInfo {
+  opacity: 0;
+  background-color: white;
+  color: black;
+  transition: 0.5s ease-in-out;
+  z-index: 100;
+  height: 100%;
+}
+
+.storeLocator {
+  background: url(../images/StoreLocator.PNG) no-repeat center center/cover;
+}
+
+.projectCard:hover .projectInfo {
+  opacity: 1;
+}
+
+.covidTracker {
+  background: url(../images/CovidTracker.PNG) no-repeat center center/cover;
+}
+
+.projectCard:hover .projectInfo {
+  opacity: 1;
+}
+
 section:nth-child(5) {
   background-color: black;
 }
