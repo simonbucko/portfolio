@@ -1,8 +1,9 @@
-let buttonDown = document.getElementById('down');
-let buttonMiddle = document.getElementById('middle');
-let buttonUp = document.getElementById('up');
-let sections = document.querySelectorAll('section');
-let buttons = [buttonUp, buttonMiddle, buttonDown];
+const buttonDown = document.getElementById('down');
+const buttonMiddle = document.getElementById('middle');
+const buttonUp = document.getElementById('up');
+const buttonFooter = document.getElementById('footer');
+const sections = document.querySelectorAll('section');
+let buttons = [buttonUp, buttonMiddle, buttonDown, buttonFooter];
 
 function activeButtons(buttonsLocal, index) {
     buttonsLocal.forEach((button, i) => {
@@ -15,6 +16,9 @@ function activeButtons(buttonsLocal, index) {
 activeButtons(buttons, 0);
 
 //Buttons clicks scrolling
+buttonFooter.addEventListener('click', () => {
+    sections[3].scrollIntoView({ behavior: "smooth" });
+})
 buttonDown.addEventListener('click', () => {
     sections[2].scrollIntoView({ behavior: "smooth" });
 })
@@ -49,7 +53,9 @@ sections.forEach(section => {
 window.addEventListener('scroll', () => {
     let firstElementMiddle = (sections[0].offsetTop + sections[1].offsetTop) / 2;
     let secondElementMiddle = (sections[1].offsetTop + sections[2].offsetTop) / 2;
+    let thirdElementMiddle = (sections[2].offsetTop + sections[3].offsetTop) / 2;
     if (window.pageYOffset <= firstElementMiddle) activeButtons(buttons, 0);
     else if (window.pageYOffset > firstElementMiddle && window.pageYOffset < secondElementMiddle) activeButtons(buttons, 1);
-    else activeButtons(buttons, 2);
+    else if (window.pageYOffset > secondElementMiddle && window.pageYOffset < thirdElementMiddle) activeButtons(buttons, 2);
+    else activeButtons(buttons, 3);
 })
