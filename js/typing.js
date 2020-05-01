@@ -1,54 +1,41 @@
-const texts = ['WEB developer', 'HUMAN',]
-let count = 0;
-let index = 0;
-let currentText = '';
-let letter = '';
-let letterBackWard = '';
-let textField = document.querySelector('#profilTextBox');
+const typedTextSpan = document.querySelector("#profilTextBox");
+const cursorSpan = document.querySelector("#cursor");
 
-function pause(duration) {
-    let time = new Date().getTime();
-    let currentTime = 0;
-    while (currentTime - time < duration) {
-        currentTime = new Date().getTime();
+const textArray = ["WEB developer", "HUMAN"];
+const typingDelay = 150;
+const erasingDelay = 100;
+const newTextDelay = 2000;
+let textArrayIndex = 0;
+let charIndex = 0;
+
+function type() {
+    if (charIndex < textArray[textArrayIndex].length) {
+        cursorSpan.style.animationPlayState = 'paused';
+        typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, typingDelay);
+    }
+    else {
+        cursorSpan.style.animationPlayState = 'running';
+        setTimeout(erase, newTextDelay);
     }
 }
 
-function deleting(letter, length) {
-    pause(3000);
-    for (let i = 1; i < length + 1; i++) {
-        letter = currentText.slice(0, -i);
-        pause(400);
-        // console.log(letter);
-        textField.textContent = letter;
-        console.log(textField.textContent);
+function erase() {
+    if (charIndex > 0) {
+        cursorSpan.style.animationPlayState = 'paused';
+        typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(erase, erasingDelay);
+    }
+    else {
+        cursorSpan.style.animationPlayState = 'running';
+        textArrayIndex++;
+        if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+        setTimeout(type, newTextDelay);
     }
 }
 
-(function type() {
-    //changing from the last word to first one
-    if (count === texts.length) {
-        count = 0;
-    }
-    //writting letters
-    currentText = texts[count];
-    letter = currentText.slice(0, ++index);
-    textField.textContent = letter;
-
-    //deleting letters
-    if (letter.length === currentText.length) {
-        deleting(letter, letter.length);
-
-        // pause(3000);
-        // let indexBackward = letter.length;
-        // for (let i = 0; i < indexBackward; i++) {
-        //     letter = letter.slice(0, -1);
-        //     pause(400);
-        //     console.log(letter);
-        //     textField.textContent = letter;
-        // }
-        count++;
-        index = 0;
-    }
-    setTimeout(type, 400);
-})();
+document.addEventListener("DOMContentLoaded", function () {
+    if (textArray.length) setTimeout(type, newTextDelay + 250);
+});

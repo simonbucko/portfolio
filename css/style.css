@@ -79,25 +79,37 @@ section:nth-child(2) {
   position: relative;
   font-size: 20px;
 }
-.profilText::after {
-  content: "";
+#cursor {
+  display: inline-block;
   position: absolute;
-  width: 1px;
+  width: 2px;
   height: 100%;
-  border-right: 2px solid white;
-  right: -2px;
-  animation: blink 0.8s infinite;
+  background-color: white;
+  opacity: 0;
+  right: -3px;
+  animation: blink 1s infinite;
+}
+
+.typing {
+  animation: none;
 }
 
 @keyframes blink {
   0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+  99% {
     opacity: 0;
   }
   100% {
     opacity: 1;
-  }
-  0% {
-    opacity: 0;
   }
 }
 
