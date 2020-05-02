@@ -13,25 +13,21 @@
   z-index: 1000;
   display: flex;
   flex-direction: column;
-  background-color: violet;
+  background-color: #a0a0a0;
   border-radius: 11px;
   padding: 4px;
 }
 
-.buttons button {
-  border: none;
-  outline: none;
-  background: transparent;
-  margin: 5px 0 5px;
-}
-
-button i {
-  color: white;
+.buttons i {
+  color: black;
   font-size: 8px;
+  padding: 4px 4px;
+  margin: 4px 0;
 }
 
 .activeButton {
-  transform: scale(1.5);
+  transform: scale(2.3);
+  transition: all 0.3s ease-in-out;
 }
 
 section {
@@ -235,6 +231,8 @@ section:nth-child(4) {
   height: 25rem;
   border: 2px solid black;
   position: relative;
+  border-radius: 25px;
+  overflow: hidden;
 }
 
 .projectCard h3 {
@@ -263,7 +261,7 @@ section:nth-child(4) {
 }
 
 .projectCard:hover .projectInfo {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .storeLocator {
