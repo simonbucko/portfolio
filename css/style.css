@@ -25,6 +25,12 @@
   margin: 4px 0;
 }
 
+.buttons i:hover {
+  transform: scale(1.4);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
 .activeButton {
   transform: scale(2.3);
   transition: all 0.3s ease-in-out;
@@ -148,6 +154,9 @@ section:nth-child(3) {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.8s 0.3s;
 }
 
 .technologiesTables {
@@ -223,6 +232,9 @@ section:nth-child(4) {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.8s 0.3s;
 }
 
 .projectCard {
@@ -303,6 +315,17 @@ section:nth-child(4) {
 .projectCard:hover .projectInfoLinks {
   bottom: 10%;
   opacity: 1;
+}
+
+.scrollAnimation {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.8s 0.3s;
+}
+
+.showContent {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 footer {

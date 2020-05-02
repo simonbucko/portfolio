@@ -2,7 +2,23 @@ const buttonDown = document.getElementById('down');
 const buttonMiddle = document.getElementById('middle');
 const buttonUp = document.getElementById('up');
 const sections = document.querySelectorAll('section');
+const firstContent = document.querySelector('.scrollAnimation');
+const secondContent = document.querySelector('.technologiesContent');
+const thirdContent = document.querySelector('.projectsContent');
+
 let buttons = [buttonUp, buttonMiddle, buttonDown];
+let contentsToAnimate = [firstContent, secondContent, thirdContent];
+
+function toogleContentAnimation(index) {
+    contentsToAnimate.forEach((content, i) => {
+        if (i === index) content.classList.add('showContent');
+        else content.classList.remove('showContent');
+    })
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(toogleContentAnimation(0), 250);
+});
 
 function activeButtons(buttonsLocal, index) {
     buttonsLocal.forEach((button, i) => {
@@ -43,9 +59,16 @@ sections.forEach(section => {
 window.addEventListener('scroll', () => {
     let firstElementMiddle = (sections[0].offsetTop + sections[1].offsetTop) / 2;
     let secondElementMiddle = (sections[1].offsetTop + sections[2].offsetTop) / 2;
-    // let thirdElementMiddle = (sections[2].offsetTop + sections[3].offsetTop) / 2;
-    if (window.pageYOffset <= firstElementMiddle) activeButtons(buttons, 0);
-    else if (window.pageYOffset > firstElementMiddle && window.pageYOffset < secondElementMiddle) activeButtons(buttons, 1);
-    // else if (window.pageYOffset > secondElementMiddle && window.pageYOffset < thirdElementMiddle) activeButtons(buttons, 2);
-    else activeButtons(buttons, 2);
+    if (window.pageYOffset <= firstElementMiddle) {
+        activeButtons(buttons, 0);
+        toogleContentAnimation(0);
+    }
+    else if (window.pageYOffset > firstElementMiddle && window.pageYOffset < secondElementMiddle) {
+        activeButtons(buttons, 1);
+        toogleContentAnimation(1);
+    }
+    else {
+        activeButtons(buttons, 2);
+        toogleContentAnimation(2);
+    }
 })
