@@ -231,9 +231,6 @@ section:nth-child(4) {
 
 .projectImage {
   position: relative;
-  top: 0px;
-  left: 0px;
-  z-index: 0;
   height: 100%;
 }
 
@@ -242,23 +239,52 @@ section:nth-child(4) {
   background-color: white;
   color: black;
   transition: 0.5s ease-in-out;
-  z-index: 100;
+  position: relative;
+  z-index: 10;
   height: 100%;
-}
-
-.storeLocator {
-  background: url(../images/StoreLocator.PNG) no-repeat center center/cover;
 }
 
 .projectCard:hover .projectInfo {
   opacity: 1;
 }
 
+.storeLocator {
+  background: url(../images/StoreLocator.PNG) no-repeat center center/cover;
+}
+
 .covidTracker {
   background: url(../images/CovidTracker.PNG) no-repeat center center/cover;
 }
 
-.projectCard:hover .projectInfo {
+.projectInfoDescription {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 1s;
+}
+
+.projectInfoDescription h5 {
+  text-align: center;
+}
+
+.projectInfoLinks {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: 1s;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.projectCard:hover .projectInfoDescription {
+  top: 10%;
+  opacity: 1;
+}
+.projectCard:hover .projectInfoLinks {
+  bottom: 10%;
   opacity: 1;
 }
 
