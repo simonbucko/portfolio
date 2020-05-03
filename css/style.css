@@ -179,9 +179,24 @@ section:nth-child(3)::after {
   border: 1px solid white;
   border-radius: 15px;
   padding: 13px;
-  min-width: 130px;
+  width: 185px;
   color: black;
   background-color: white;
+}
+
+.technologies h3 {
+  text-align: center;
+  font-size: 25px;
+  padding: 2px;
+  border-bottom: 1px solid;
+}
+
+.technologies ul {
+  font-size: 20px;
+}
+
+.technologies ul li {
+  padding: 2px;
 }
 
 .technologiesAnimation {
@@ -191,6 +206,10 @@ section:nth-child(3)::after {
   transform: translateY(100px);
   transition: all 0.8s 0.3s;
   z-index: 10;
+}
+
+.technologiesAnimation ul {
+  font-size: 30px;
 }
 
 .animatedLi:nth-child(even) {
