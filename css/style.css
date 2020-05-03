@@ -65,6 +65,7 @@ section:nth-child(2) {
 
 .content {
   z-index: 10;
+  margin-top: 20px;
 }
 .profilPicture {
   height: 300px;
@@ -158,7 +159,7 @@ section:nth-child(3)::after {
 
 #technologiesTitle {
   position: absolute;
-  top: 25%;
+  top: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
@@ -253,7 +254,7 @@ section:nth-child(4)::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 #projectTitle {
@@ -368,8 +369,8 @@ section:nth-child(4)::after {
 }
 
 footer {
-  background-color: white;
-  color: black;
+  background-color: #050506;
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -421,15 +422,18 @@ footer span {
   }
 
   .technologiesTables {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
   }
   .technologiesAnimation {
     margin-bottom: -10rem;
   }
 
+  section:nth-child(4) {
+    background-position: 80%;
+  }
   .projectCard {
     margin: 10px 1rem 10px 1rem;
     width: 35rem;
-    height: 13rem;
+    height: 14rem;
   }
 }
