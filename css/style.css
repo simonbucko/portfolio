@@ -96,12 +96,12 @@ section:nth-child(2) {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .profilText {
   position: relative;
-  font-size: 20px;
+  font-size: 40px;
 }
 #cursor {
   display: inline-block;
@@ -143,6 +143,8 @@ section:nth-child(3) {
     center/cover;
   color: white;
   display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
   position: relative;
 }
@@ -158,17 +160,14 @@ section:nth-child(3)::after {
 }
 
 #technologiesTitle {
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   z-index: 10;
+  font-size: 40px;
 }
 
-.technologiesContent {
-  width: 100%;
+.technologiesTables {
   display: flex;
-  justify-content: space-between;
+  width: 50%;
+  justify-content: space-around;
   opacity: 0;
   transform: translateY(100px);
   transition: all 0.8s 0.3s;
@@ -176,15 +175,22 @@ section:nth-child(3)::after {
   z-index: 10;
 }
 
-.technologiesTables {
-  display: flex;
-  width: 50%;
-  justify-content: space-around;
+.technologies {
+  border: 1px solid white;
+  border-radius: 15px;
+  padding: 13px;
+  min-width: 130px;
+  color: black;
+  background-color: white;
 }
 
 .technologiesAnimation {
   width: 50%;
   position: relative;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.8s 0.3s;
+  z-index: 10;
 }
 
 .animatedLi:nth-child(even) {
@@ -395,8 +401,11 @@ footer span {
   margin-top: 5px;
 }
 
-/* Mobile devices */
+/* Tablet devices */
 @media only screen and (max-width: 1035px) {
+  .profilText {
+    font-size: 30px;
+  }
   .video-container video {
     transform: translate(-30%, -50%);
     display: none;
@@ -411,21 +420,13 @@ footer span {
     height: 300px;
   }
 
-  .technologiesContent {
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
+  #technologiesTitle {
+    font-size: 30px;
   }
+
   .technologiesTables,
   .technologiesAnimation {
     width: 100%;
-  }
-
-  .technologiesTables {
-    margin-bottom: 3rem;
-  }
-  .technologiesAnimation {
-    margin-bottom: -10rem;
   }
 
   section:nth-child(4) {
@@ -435,5 +436,11 @@ footer span {
     margin: 10px 1rem 10px 1rem;
     width: 35rem;
     height: 14rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .profilText {
+    font-size: 21px;
   }
 }
