@@ -477,6 +477,7 @@ footer span {
   }
   .technologiesTables h3 {
     border-bottom: none;
+    font-size: 20px;
   }
   .dropDownTechnologies {
     display: inline-block;
@@ -496,6 +497,16 @@ footer span {
   .openedDropDownContent {
     height: auto;
     overflow: visible;
-    transition: 0.6s ease-in-out;
+  }
+
+  .technologiesAnimation ul {
+    font-size: 20px;
+  }
+  .technologies {
+    padding: 2px;
+  }
+
+  .technologies ul {
+    font-size: 17px;
   }
 }
