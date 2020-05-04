@@ -202,6 +202,7 @@ section:nth-child(3)::after {
 
 .technologies ul li {
   padding: 2px;
+  padding-left: 10px;
 }
 
 .technologiesAnimation {
@@ -483,7 +484,7 @@ footer span {
     position: absolute;
     right: 5px;
     top: 50%;
-    transform: translateY(-47%);
+    transform: translateY(-40%);
   }
 
   .openedTechnologies {
@@ -495,7 +496,6 @@ footer span {
   }
   .openedDropDownContent {
     height: auto;
-    overflow: visible;
   }
 
   .technologiesAnimation ul {
@@ -507,5 +507,6 @@ footer span {
 
   .technologies ul {
     font-size: 17px;
+    padding: 2px;
   }
 }
