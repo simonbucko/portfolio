@@ -5,6 +5,15 @@
   list-style: none;
   font-family: "Roboto", sans-serif;
 }
+p {
+  font-size: 18px;
+  text-align: justify;
+  padding: 1px 15px;
+}
+
+.usedTechnology {
+  text-align: center;
+}
 
 .buttons {
   position: fixed;
@@ -295,6 +304,7 @@ section:nth-child(4)::after {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
+  font-size: 40px;
 }
 
 .projectsContent {
@@ -309,10 +319,8 @@ section:nth-child(4)::after {
 }
 
 .projectCard {
-  margin: 2rem 5rem 2rem 5rem;
-  width: 30rem;
-  height: 25rem;
-  border: 2px solid black;
+  width: 480px;
+  height: 400px;
   position: relative;
   border-radius: 25px;
   overflow: hidden;
@@ -326,6 +334,7 @@ section:nth-child(4)::after {
   left: 0;
   background-color: white;
   width: 100%;
+  font-size: 25px;
 }
 
 .projectImage {
@@ -366,6 +375,11 @@ section:nth-child(4)::after {
 
 .projectInfoDescription h5 {
   text-align: center;
+  font-size: 20px;
+}
+
+.usedTechnologyTitle {
+  margin-top: 15px;
 }
 
 .projectInfoLinks {
@@ -377,6 +391,17 @@ section:nth-child(4)::after {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
+}
+.projectLink {
+  background: black;
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.projectLink i {
+  margin-right: 6px;
 }
 
 .projectCard:hover .projectInfoDescription {
@@ -426,8 +451,39 @@ footer span {
   margin-top: 5px;
 }
 
+#githubLink {
+  font-size: 30px;
+  color: white;
+}
+#linkLnLink {
+  font-size: 30px;
+  color: #0282cb;
+}
+#mailToLink {
+  font-size: 30px;
+  color: #f44336;
+}
+
+.resumeLink {
+  font-size: 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  background: white;
+  padding: 4px;
+  color: black;
+}
+
+.resumeLink i {
+  color: #f44336;
+  margin-right: 4px;
+}
+
 /* Tablet devices */
 @media only screen and (max-width: 1240px) {
+  p {
+    font-size: 16px;
+  }
+
   .profilText {
     font-size: 30px;
   }
@@ -454,16 +510,25 @@ footer span {
     width: 100%;
   }
 
+  .usedTechnologyTitle {
+    margin-top: -2px;
+  }
+  .projectCard:hover .projectInfoDescription {
+    top: 5%;
+  }
+  .projectCard:hover .projectInfoLinks {
+    bottom: 5%;
+  }
   section:nth-child(4) {
     background-position: 80%;
   }
   .projectCard {
-    margin: 10px 1rem 10px 1rem;
-    width: 35rem;
-    height: 14rem;
+    margin: 10px 0 10px 0;
+    width: 360px;
+    height: 300px;
   }
 }
-
+/* Mobile devices */
 @media only screen and (max-width: 600px) {
   .profilText {
     font-size: 21px;
@@ -484,7 +549,7 @@ footer span {
     position: absolute;
     right: 5px;
     top: 50%;
-    transform: translateY(-40%);
+    transform: translateY(-45%);
   }
 
   .openedTechnologies {
@@ -496,6 +561,7 @@ footer span {
   }
   .openedDropDownContent {
     height: auto;
+    transition: 2s;
   }
 
   .technologiesAnimation ul {
@@ -507,6 +573,31 @@ footer span {
 
   .technologies ul {
     font-size: 17px;
-    padding: 2px;
+  }
+
+  .projectCard {
+    margin: 6px 1rem 6px 1rem;
+    width: 296px;
+    height: 230px;
+  }
+
+  #projectTitle {
+    font-size: 30px;
+  }
+
+  .projectCard h3 {
+    font-size: 20px;
+  }
+
+  .descriptionTitle,
+  .descriptionText {
+    display: none;
+  }
+
+  .projectCard:hover .projectInfoDescription {
+    top: 10%;
+  }
+  .projectCard:hover .projectInfoLinks {
+    bottom: 10%;
   }
 }
