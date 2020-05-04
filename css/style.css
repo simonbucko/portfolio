@@ -176,7 +176,6 @@ section:nth-child(3)::after {
 }
 
 .technologies {
-  border: 1px solid white;
   border-radius: 15px;
   padding: 13px;
   width: 185px;
@@ -472,8 +471,8 @@ footer span {
     flex-direction: column;
   }
   .technologies {
-    width: 100%;
-    margin: 3px 0;
+    width: 90%;
+    margin: 3px auto;
   }
   .technologiesTables h3 {
     border-bottom: none;
@@ -484,7 +483,7 @@ footer span {
     position: absolute;
     right: 5px;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-47%);
   }
 
   .openedTechnologies {
