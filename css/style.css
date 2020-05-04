@@ -189,6 +189,12 @@ section:nth-child(3)::after {
   font-size: 25px;
   padding: 2px;
   border-bottom: 1px solid;
+  position: relative;
+}
+
+.dropDownTechnologies {
+  display: none;
+  transition: 0.3s ease-in-out;
 }
 
 .technologies ul {
@@ -421,7 +427,7 @@ footer span {
 }
 
 /* Tablet devices */
-@media only screen and (max-width: 1035px) {
+@media only screen and (max-width: 1240px) {
   .profilText {
     font-size: 30px;
   }
@@ -461,5 +467,35 @@ footer span {
 @media only screen and (max-width: 600px) {
   .profilText {
     font-size: 21px;
+  }
+  .technologiesTables {
+    flex-direction: column;
+  }
+  .technologies {
+    width: 100%;
+    margin: 3px 0;
+  }
+  .technologiesTables h3 {
+    border-bottom: none;
+  }
+  .dropDownTechnologies {
+    display: inline-block;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .openedTechnologies {
+    transform: rotate(180deg) translateY(50%);
+  }
+  .dropDownContent {
+    height: 0;
+    overflow: hidden;
+  }
+  .openedDropDownContent {
+    height: auto;
+    overflow: visible;
+    transition: 0.6s ease-in-out;
   }
 }

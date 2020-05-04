@@ -57,9 +57,14 @@
         <h2 id="technologiesTitle">Skill Set</h2>
 
         <div class="technologiesTables">
-          <div class="technologies">
-            <h3>FRONT-END</h3>
-            <ul>
+          <div data-index="0" class="technologies">
+            <h3>
+              FRONT-END
+              <span class="dropDownTechnologies"
+                ><i class="fas fa-angle-down"></i
+              ></span>
+            </h3>
+            <ul class="dropDownContent">
               <li>HTML5</li>
               <li>CSS3</li>
               <li>JavaScript</li>
@@ -67,17 +72,25 @@
               <li>jQuery</li>
             </ul>
           </div>
-          <div class="technologies">
-            <h3>BACK-END</h3>
-            <ul>
+          <div data-index="1" class="technologies">
+            <h3>
+              BACK-END<span class="dropDownTechnologies"
+                ><i class="fas fa-angle-down"></i
+              ></span>
+            </h3>
+            <ul class="dropDownContent">
               <li>PHP</li>
               <li>SQL</li>
               <li>MySQL</li>
             </ul>
           </div>
-          <div class="technologies">
-            <h3>OTHER</h3>
-            <ul>
+          <div data-index="2" class="technologies">
+            <h3>
+              OTHER<span class="dropDownTechnologies"
+                ><i class="fas fa-angle-down"></i
+              ></span>
+            </h3>
+            <ul class="dropDownContent">
               <li>C</li>
               <li>Java</li>
               <li>Git</li>
@@ -192,5 +205,6 @@
     <script src="./js/scroll.js"></script>
     <script src="./js/typing.js"></script>
     <script src="./js/listAnimation.js"></script>
+    <script src="./js/skillsDropDown.js"></script>
   </body>
 </html>
