@@ -1,7 +1,7 @@
 const typedTextSpan = document.querySelector("#profilTextBox");
 const cursorSpan = document.querySelector("#cursor");
 
-const textArray = ["a WEB developer", "a HUMAN", "used to great things"];
+const textArray = ["a WEB developer", "a HUMAN", "used to do great things"];
 const typingDelay = 150;
 const erasingDelay = 100;
 const newTextDelay = 2000;
