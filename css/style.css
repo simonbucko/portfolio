@@ -446,17 +446,17 @@ footer {
 }
 
 .socialLinks ul li {
-  margin: 0 5px;
+  margin: 0 10px;
 }
 
 footer a {
   display: inline-block;
-  margin-top: 5px;
+  margin-top: 15px;
 }
 
 footer span {
   display: inline-block;
-  margin-top: 5px;
+  margin-top: 15px;
 }
 
 #githubLink {
