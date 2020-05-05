@@ -1,3 +1,4 @@
+/* #e9eaec */
 * {
   padding: 0;
   margin: 0;
@@ -23,19 +24,19 @@ p {
   z-index: 1000;
   display: flex;
   flex-direction: column;
-  background-color: #a0a0a0;
   border-radius: 11px;
   padding: 4px;
+  height: 90px;
+  justify-content: space-between;
 }
 
 .buttons i {
-  color: black;
+  color: #e9eaec;
   font-size: 8px;
   padding: 4px 4px;
-  margin: 4px 0;
 }
 
-.buttons i:hover {
+.navButton:hover {
   transform: scale(1.4);
   transition: all 0.3s ease-in-out;
   cursor: pointer;
@@ -43,6 +44,7 @@ p {
 
 .activeButton {
   transform: scale(2.3);
+  padding: 0;
   transition: all 0.3s ease-in-out;
 }
 
@@ -105,7 +107,7 @@ section:nth-child(2) {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .profilText {
@@ -294,7 +296,7 @@ section:nth-child(4)::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 #projectTitle {
@@ -392,12 +394,17 @@ section:nth-child(4)::after {
   display: flex;
   justify-content: space-evenly;
 }
+
 .projectLink {
   background: black;
   color: white;
   padding: 8px;
   border-radius: 8px;
   text-decoration: none;
+}
+
+.projectLink:hover {
+  transform: scale(1.1);
 }
 
 .projectLink i {
@@ -455,13 +462,25 @@ footer span {
   font-size: 30px;
   color: white;
 }
+#githubLink:hover {
+  transform: scale(1.1);
+}
 #linkLnLink {
   font-size: 30px;
   color: #0282cb;
 }
+
+#linkLnLink:hover {
+  transform: scale(1.1);
+}
+
 #mailToLink {
   font-size: 30px;
   color: #f44336;
+}
+
+#mailToLink:hover {
+  transform: scale(1.1);
 }
 
 .resumeLink {
@@ -476,6 +495,9 @@ footer span {
 .resumeLink i {
   color: #f44336;
   margin-right: 4px;
+}
+.resumeLink:hover {
+  text-decoration: underline;
 }
 
 /* Tablet devices */
@@ -530,6 +552,9 @@ footer span {
 }
 /* Mobile devices */
 @media only screen and (max-width: 600px) {
+  .buttons {
+    background-color: black;
+  }
   .profilText {
     font-size: 21px;
   }
