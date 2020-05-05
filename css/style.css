@@ -512,7 +512,6 @@ footer span {
   }
   .video-container video {
     transform: translate(-30%, -50%);
-    display: none;
   }
 
   .profilPicture {
