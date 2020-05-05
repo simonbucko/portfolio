@@ -23,6 +23,16 @@ function toogleContentAnimation(index) {
 
 document.addEventListener("DOMContentLoaded", () => {
     setTimeout(toogleContentAnimation(0), 1000);
+    //remove hover from nav on mobiles
+    if (window.screen.width < 760) {
+        buttons.forEach(button => {
+            button.classList.remove('navButton');
+        })
+    } else {
+        buttons.forEach(button => {
+            button.classList.add('navButton');
+        })
+    }
 });
 
 function activeButtons(buttonsLocal, index) {
@@ -66,15 +76,4 @@ window.addEventListener('scroll', () => {
         toogleContentAnimation(3);
     }
 })
-//removing hover from nav on mobiles
-window.addEventListener('resize', () => {
-    if (window.screen.width < 760) {
-        buttons.forEach(button => {
-            button.classList.remove('navButton');
-        })
-    } else {
-        buttons.forEach(button => {
-            button.classList.add('navButton');
-        })
-    }
-})
+
