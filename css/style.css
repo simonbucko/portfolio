@@ -439,7 +439,9 @@ footer {
   flex-direction: column;
   align-items: center;
 }
-
+.contact-me {
+  font-size: 30px;
+}
 .socialLinks ul {
   display: flex;
   margin-top: 5px;
@@ -491,6 +493,8 @@ footer span {
   background: #e9eaec;
   padding: 4px;
   color: black;
+  text-align: center;
+  width: 150px;
 }
 
 .resumeLink i {
