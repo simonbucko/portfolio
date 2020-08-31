@@ -367,6 +367,10 @@ section:nth-child(4)::after {
   background: url(../images/CovidTracker.PNG) no-repeat center center/cover;
 }
 
+.planning {
+  background: url(../images/Planning.PNG) no-repeat center center/cover;
+}
+
 .projectInfoDescription {
   position: absolute;
   top: 0;
