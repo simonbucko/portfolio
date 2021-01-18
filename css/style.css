@@ -51,7 +51,7 @@ p {
 
 section {
   display: block;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 section:nth-child(2) {
@@ -327,6 +327,7 @@ section:nth-child(4)::after {
   position: relative;
   border-radius: 25px;
   overflow: hidden;
+  margin: 30px 0 0;
 }
 
 .projectCard h3 {
@@ -369,6 +370,14 @@ section:nth-child(4)::after {
 
 .planning {
   background: url(../images/Planning.PNG) no-repeat center center/cover;
+}
+
+.cloundFcions {
+  background: url(../images/FirebaseFunctinos.PNG) no-repeat center center/cover;
+}
+
+.jwtAuth {
+  background: url(../images/JWT.PNG) no-repeat center center/cover;
 }
 
 .projectInfoDescription {
