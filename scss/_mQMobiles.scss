@@ -1,0 +1,76 @@
+/* Mobile devices */
+@media only screen and (max-width: 600px) {
+  .buttons {
+    background-color: #050506;
+  }
+  .profilText {
+    font-size: 21px;
+  }
+  .technologiesTables {
+    flex-direction: column;
+  }
+  .technologies {
+    width: 90%;
+    margin: 3px auto;
+  }
+  .technologiesTables h3 {
+    border-bottom: none;
+    font-size: 20px;
+  }
+  .dropDownTechnologies {
+    display: inline-block;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-45%);
+  }
+
+  .openedTechnologies {
+    transform: rotate(180deg) translateY(50%);
+  }
+  .dropDownContent {
+    height: 0;
+    overflow: hidden;
+  }
+  .openedDropDownContent {
+    height: auto;
+    transition: 2s;
+  }
+
+  .technologiesAnimation ul {
+    font-size: 20px;
+  }
+  .technologies {
+    padding: 2px;
+  }
+
+  .technologies ul {
+    font-size: 17px;
+  }
+
+  .projectCard {
+    margin: 6px 1rem 6px 1rem;
+    width: 296px;
+    height: 230px;
+  }
+
+  #projectTitle {
+    font-size: 30px;
+  }
+
+  .projectCard h3 {
+    font-size: 20px;
+  }
+
+  .descriptionTitle,
+  .descriptionText {
+    display: none;
+  }
+
+  .projectCard:hover .projectInfoDescription {
+    top: 10%;
+  }
+  .projectCard:hover .projectInfoLinks {
+    bottom: 10%;
+  }
+}

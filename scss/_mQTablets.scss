@@ -1,0 +1,49 @@
+/* Tablet devices */
+@media only screen and (max-width: 1240px) {
+  p {
+    font-size: 16px;
+  }
+
+  .profilText {
+    font-size: 30px;
+  }
+  .video-container video {
+    transform: translate(-30%, -50%);
+  }
+
+  .profilPicture {
+    height: 200px;
+    width: 200px;
+  }
+
+  .profilPicture img {
+    height: 300px;
+  }
+
+  #technologiesTitle {
+    font-size: 30px;
+  }
+
+  .technologiesTables,
+  .technologiesAnimation {
+    width: 100%;
+  }
+
+  .usedTechnologyTitle {
+    margin-top: -2px;
+  }
+  .projectCard:hover .projectInfoDescription {
+    top: 5%;
+  }
+  .projectCard:hover .projectInfoLinks {
+    bottom: 5%;
+  }
+  section:nth-child(4) {
+    background-position: 80%;
+  }
+  .projectCard {
+    margin: 10px 0 10px 0;
+    width: 360px;
+    height: 300px;
+  }
+}
