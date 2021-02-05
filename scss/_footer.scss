@@ -1,72 +1,57 @@
 footer {
-  background-color: #050506;
-  color: #e9eaec;
+  background-color: $secondary;
+  color: $primary;
   display: flex;
   flex-direction: column;
   align-items: center;
+  a {
+    display: inline-block;
+    margin-top: em(15);
+  }
+  span {
+    display: inline-block;
+    margin-top: em(15);
+  }
 }
 .contact-me {
-  font-size: 30px;
+  font-size: em(30);
 }
 .socialLinks ul {
   display: flex;
-  margin-top: 5px;
-}
-
-.socialLinks ul li {
-  margin: 0 10px;
-}
-
-footer a {
-  display: inline-block;
-  margin-top: 15px;
-}
-
-footer span {
-  display: inline-block;
-  margin-top: 15px;
+  margin-top: em(5);
+  li {
+    margin: 0 em(10);
+  }
 }
 
 #githubLink {
-  font-size: 30px;
-  color: #e9eaec;
-}
-#githubLink:hover {
-  transform: scale(1.1);
-}
-#linkLnLink {
-  font-size: 30px;
-  color: #0282cb;
+  font-size: em(30);
+  color: $primary;
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
-#linkLnLink:hover {
-  transform: scale(1.1);
+#linkLnLink {
+  font-size: em(30);
+  color: $linkInColor;
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 #mailToLink {
-  font-size: 30px;
-  color: #f44336;
+  font-size: em(30);
+  color: $mailColor;
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
-#mailToLink:hover {
-  transform: scale(1.1);
-}
-
-.resumeLink {
-  font-size: 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  background: #e9eaec;
-  padding: 4px;
-  color: black;
-  text-align: center;
-  width: 150px;
-}
-
-.resumeLink i {
-  color: #f44336;
-  margin-right: 4px;
-}
-.resumeLink:hover {
-  text-decoration: underline;
+#pdfLink {
+  font-size: em(30);
+  color: $mailColor;
+  &:hover {
+    transform: scale(1.1);
+  }
 }

@@ -3,19 +3,16 @@ const buttonMiddle = document.getElementById('middle');
 const buttonUp = document.getElementById('up');
 const sections = document.querySelectorAll('section');
 const firstContent = document.querySelector('.scrollAnimation');
-const secondContent = document.querySelector('.technologiesTables');
-const thirdContent = document.querySelector('.technologiesAnimation');
-const fourthContent = document.querySelector('.projectsContent');
+const secondContent = document.querySelector('.technologiesAnimation');
+const thirdContent = document.querySelector('.projectsContent');
 
 let buttons = [buttonUp, buttonMiddle, buttonDown];
-let contentsToAnimate = [firstContent, secondContent, thirdContent, fourthContent];
+let contentsToAnimate = [firstContent, secondContent, thirdContent];
 
 function toogleContentAnimation(index) {
     contentsToAnimate.forEach((content, i) => {
         if (i === index) {
             content.classList.add('showContent');
-            if (index === 2)
-                contentsToAnimate[1].classList.add('showContent');
         }
         else content.classList.remove('showContent');
     })
@@ -69,11 +66,10 @@ window.addEventListener('scroll', () => {
     else if (window.pageYOffset > firstElementMiddle && window.pageYOffset < secondElementMiddle) {
         activeButtons(buttons, 1);
         toogleContentAnimation(1);
-        toogleContentAnimation(2);
     }
     else {
         activeButtons(buttons, 2);
-        toogleContentAnimation(3);
+        toogleContentAnimation(2);
     }
 })
 
