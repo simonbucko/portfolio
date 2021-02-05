@@ -4,24 +4,20 @@
     background-color: $secondary;
   }
   .profilText {
-    font-size: 21px;
-  }
-
-  .technologiesAnimation ul {
-    font-size: 20px;
+    font-size: em(21);
   }
 
   .projectCard {
-    margin: 6px 1rem 6px 1rem;
-    width: 296px;
-    height: 230px;
+    margin: em(6) em(16) em(6) em(16);
+    width: em(296);
+    height: em(230);
     h3 {
-      font-size: 20px;
+      font-size: em(20);
     }
   }
 
   #projectTitle {
-    font-size: 30px;
+    font-size: em(30);
   }
 
   .descriptionTitle,
@@ -34,5 +30,18 @@
   }
   .projectCard:hover .projectInfoLinks {
     bottom: 10%;
+  }
+  .technologiesAnimation ul {
+    font-size: em(20);
+  }
+
+  .profilText {
+    font-size: em(20);
+  }
+
+  .socialLinks ul {
+    li {
+      margin: 0 em(5.2);
+    }
   }
 }

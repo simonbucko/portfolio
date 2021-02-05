@@ -6,7 +6,6 @@ footer {
   align-items: center;
   a {
     display: inline-block;
-    margin-top: em(15);
   }
   span {
     display: inline-block;
@@ -18,22 +17,30 @@ footer {
 }
 .socialLinks ul {
   display: flex;
-  margin-top: em(5);
+  margin-top: em(20);
   li {
     margin: 0 em(10);
+    display: flex;
+    background-color: $primary;
+    height: em(60);
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: em(60);
+    flex-wrap: wrap;
   }
 }
 
 #githubLink {
-  font-size: em(30);
-  color: $primary;
+  font-size: em(40);
+  color: $secondary;
   &:hover {
     transform: scale(1.1);
   }
 }
 
 #linkLnLink {
-  font-size: em(30);
+  font-size: em(40);
   color: $linkInColor;
   &:hover {
     transform: scale(1.1);
@@ -41,7 +48,7 @@ footer {
 }
 
 #mailToLink {
-  font-size: em(30);
+  font-size: em(40);
   color: $mailColor;
   &:hover {
     transform: scale(1.1);
@@ -49,7 +56,7 @@ footer {
 }
 
 #pdfLink {
-  font-size: em(30);
+  font-size: em(40);
   color: $mailColor;
   &:hover {
     transform: scale(1.1);

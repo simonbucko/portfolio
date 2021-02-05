@@ -1,26 +1,26 @@
 /* Tablet devices */
 @media only screen and (max-width: 1240px) {
   p {
-    font-size: 16px;
+    font-size: em(16);
   }
 
   .profilText {
-    font-size: 30px;
+    font-size: em(30);
   }
   .video-container video {
     transform: translate(-30%, -50%);
   }
 
   .profilPicture {
-    height: 200px;
-    width: 200px;
+    height: em(200);
+    width: em(200);
     img {
-      height: 300px;
+      height: em(300);
     }
   }
 
   #technologiesTitle {
-    font-size: 30px;
+    font-size: em(30);
   }
 
   .technologiesTables,
@@ -41,8 +41,31 @@
     background-position: 80%;
   }
   .projectCard {
-    margin: 10px 0 10px 0;
-    width: 360px;
-    height: 300px;
+    margin: em(10) 0;
+    width: em(360);
+    height: em(360);
+  }
+
+  .socialLinks ul {
+    li {
+      height: em(50);
+      width: em(50);
+    }
+  }
+
+  #githubLink {
+    font-size: em(30);
+  }
+
+  #linkLnLink {
+    font-size: em(30);
+  }
+
+  #mailToLink {
+    font-size: em(30);
+  }
+
+  #pdfLink {
+    font-size: em(30);
   }
 }
