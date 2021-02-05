@@ -9,8 +9,8 @@
 
   .projectCard {
     margin: em(6) em(16) em(6) em(16);
-    width: em(296);
-    height: em(230);
+    width: 80%;
+    height: em(294);
     h3 {
       font-size: em(20);
     }
@@ -26,7 +26,8 @@
   }
 
   .projectCard:hover .projectInfoDescription {
-    top: 10%;
+    top: 50%;
+    transform: translateY(-50%);
   }
   .projectCard:hover .projectInfoLinks {
     bottom: 10%;

@@ -49,12 +49,12 @@ buttons.forEach((button, i) => {
     })
 })
 //Scrolling onClick
-sections.forEach(section => {
-    section.addEventListener('click', function () {
-        const id = this.getAttribute('id');
-        sections[id].scrollIntoView({ behavior: 'smooth' });
-    })
-})
+// sections.forEach(section => {
+//     section.addEventListener('click', function () {
+//         const id = this.getAttribute('id');
+//         sections[id].scrollIntoView({ behavior: 'smooth' });
+//     })
+// })
 
 window.addEventListener('scroll', () => {
     let firstElementMiddle = (sections[0].offsetTop + sections[1].offsetTop) / 2;

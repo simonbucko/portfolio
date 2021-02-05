@@ -1,6 +1,7 @@
 section:nth-child(4) {
   background-color: $secondary;
   display: flex;
+  flex-direction: column;
   align-items: center;
   position: relative;
   background: url(../images/codeBackgroundThird.jpg) no-repeat center
@@ -18,16 +19,13 @@ section:nth-child(4) {
 
 #projectTitle {
   color: $primary;
-  position: absolute;
-  top: 5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   z-index: 10;
   font-size: em(40);
 }
 
 .projectsContent {
   width: 100%;
+  max-width: em(1600);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -41,9 +39,9 @@ section:nth-child(4) {
   width: em(480);
   height: em(480);
   position: relative;
-  border-radius: em(25);
+  border-radius: em(15.4);
   overflow: hidden;
-  margin: em(30) 0 0;
+  margin: em(30) em(10);
   h3 {
     text-align: center;
     z-index: 10;
