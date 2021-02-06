@@ -30,6 +30,22 @@ document.addEventListener("DOMContentLoaded", () => {
             button.classList.add('navButton');
         })
     }
+    window.addEventListener('scroll', () => {
+        let firstElementMiddle = (sections[0].offsetTop + sections[1].offsetTop) / 2;
+        let secondElementMiddle = (sections[1].offsetTop + sections[2].offsetTop) / 2;
+        if (window.pageYOffset <= firstElementMiddle) {
+            activeButtons(buttons, 0);
+            toogleContentAnimation(0);
+        }
+        else if (window.pageYOffset > firstElementMiddle && window.pageYOffset < secondElementMiddle) {
+            activeButtons(buttons, 1);
+            toogleContentAnimation(1);
+        }
+        else {
+            activeButtons(buttons, 2);
+            toogleContentAnimation(2);
+        }
+    })
 });
 
 function activeButtons(buttonsLocal, index) {
@@ -56,20 +72,5 @@ buttons.forEach((button, i) => {
 //     })
 // })
 
-window.addEventListener('scroll', () => {
-    let firstElementMiddle = (sections[0].offsetTop + sections[1].offsetTop) / 2;
-    let secondElementMiddle = (sections[1].offsetTop + sections[2].offsetTop) / 2;
-    if (window.pageYOffset <= firstElementMiddle) {
-        activeButtons(buttons, 0);
-        toogleContentAnimation(0);
-    }
-    else if (window.pageYOffset > firstElementMiddle && window.pageYOffset < secondElementMiddle) {
-        activeButtons(buttons, 1);
-        toogleContentAnimation(1);
-    }
-    else {
-        activeButtons(buttons, 2);
-        toogleContentAnimation(2);
-    }
-})
+
 
