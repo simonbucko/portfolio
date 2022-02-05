@@ -51,6 +51,7 @@ section:nth-child(4) {
     background-color: $primary;
     width: 100%;
     font-size: em(25);
+    padding: em(8) 0;
   }
 }
 
@@ -128,8 +129,8 @@ section:nth-child(4) {
 .projectLink {
   background: black;
   color: $primary;
-  padding: em(8);
-  border-radius: em(8);
+  padding: em(8) em(32);
+  border-radius: em(24);
   text-decoration: none;
   &:hover {
     transform: scale(1.05);
